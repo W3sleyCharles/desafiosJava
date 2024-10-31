@@ -19,11 +19,7 @@ public class App {
         System.out.println("Adicione um valor inicial a conta: ");
         int saldo = scanner.nextInt();
 
-
-
         scanner.close();
-
-
 
 
         Conta conta = new Conta(numero, agencia, nomeCliente, saldo);
