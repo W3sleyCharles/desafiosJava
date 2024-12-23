@@ -1,4 +1,4 @@
-package SegundoDesafio;
+package Desafios.SegundoDesafio;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.ArrayList;
 import java.util.List;
