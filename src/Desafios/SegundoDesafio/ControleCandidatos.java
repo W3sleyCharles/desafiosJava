@@ -1,4 +1,4 @@
-package SegundoDesafio;
+package Desafios.SegundoDesafio;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +34,16 @@ public class ControleCandidatos {
             analisarCandidatos(salarioPretendido);
             
             if(salarioBase >= salarioPretendido) {
-                System.out.println("O candidato " + candidato + " foi selecionado para a proxima fase");
-                candidatosSelecionados++;
-                ultimaEtapa.add(candidato);
+                System.out.println("Parabéns " + candidato + ", você foi um dos candidatos selecionados, aguarde a ligação para maiores instruções");
+                atenderLigacao();
+                if(atenderLigacao() == true){
+                    System.out.println("Parabéns " + candidato + " selecionamos você para a próxima etapa, agora aguarde o dia da entrevista");
+                    candidatosSelecionados++;
+                    ultimaEtapa.add(candidato);}
+                else {
+                    System.out.println("Infelizmente o candidato " + candidato + " não atendeu as ligações");
+                    continue;
+                }
                 
             }
             candidatoAtual++;
@@ -88,5 +95,9 @@ public class ControleCandidatos {
             System.out.println("NÃO RETORNAR COM LIGAÇÃO");
         }
 
+    }
+    
+    static boolean atenderLigacao () {
+        return new Random().nextInt(3)==1;
     }
 }

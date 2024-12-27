@@ -1,4 +1,4 @@
-package PrimeiroDesafio;
+package Desafios.PrimeiroDesafio;
 
 public class Conta {
     private int numero = 0000;
